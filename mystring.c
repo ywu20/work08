@@ -1,6 +1,11 @@
 //strlen [ int mystrlen( char *s ) ]
 int mystrlen(char*s){
-  return 0;
+  int len = 0;
+  while(*s){
+    len++;
+    s++;
+  }
+  return len;
 }
 //strcpy/strncpy (choose one) [ char * mystrcpy( char *dest, char *source ) char * mystrncpy( char *dest, char *source, int n) ]
 char* mystrncpy(char *dest, char *source, int n){
