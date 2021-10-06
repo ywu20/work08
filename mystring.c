@@ -28,8 +28,11 @@ char * mystrcat( char *dest, char *source){
 
 //strcmp [ int mystrcmp( char *s1, char *s2 ) ]
 int mystrcmp( char *s1, char *s2 ){
-
-  return 0;
+  while(*s1 == *s2){
+    s1++;
+    s2++;
+  }
+  return *s1-*s2;
 }
 //    Your version does not need to return the same exact value as the system version, as long as it returns -, + or 0 when it should.
 //strchr [ char * mystrchr( char *s, char c ) ]
