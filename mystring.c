@@ -20,12 +20,15 @@ char* mystrncpy(char *dest, char *source, int n){
 }
 //strcat/strncat (choose one) [ char * mystrcat( char *dest, char *source ) char * mystrncat( char *dest, char *source, int n) ]
 char * mystrcat( char *dest, char *source){
-  char * temp;
+  char * temp = dest;
+  dest += mystrlen(dest);
+  mystrncpy(dest,source,mystrlen(source));
   return temp;
 }
 
 //strcmp [ int mystrcmp( char *s1, char *s2 ) ]
 int mystrcmp( char *s1, char *s2 ){
+
   return 0;
 }
 //    Your version does not need to return the same exact value as the system version, as long as it returns -, + or 0 when it should.
