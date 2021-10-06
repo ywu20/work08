@@ -7,9 +7,15 @@ int mystrlen(char*s){
   }
   return len;
 }
+
 //strcpy/strncpy (choose one) [ char * mystrcpy( char *dest, char *source ) char * mystrncpy( char *dest, char *source, int n) ]
 char* mystrncpy(char *dest, char *source, int n){
-  char * temp;
+  char * temp = dest;
+  while (--n){
+    *dest = *source;
+    dest++;
+    source++;
+  }
   return temp;
 }
 //strcat/strncat (choose one) [ char * mystrcat( char *dest, char *source ) char * mystrncat( char *dest, char *source, int n) ]
