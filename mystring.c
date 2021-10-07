@@ -77,7 +77,9 @@ char * mystrstr( char *s1, char * s2 ){
    while(*s1){
      s2 = s2cp;
      while(*s1 == *s2){
-     	if (s2 == NULL) return --s1;
+     	if (s2[1] == 0) {
+        return --s1;
+      }
      	s1++;
      	s2++;
      }
@@ -85,5 +87,3 @@ char * mystrstr( char *s1, char * s2 ){
    }
    return NULL;
 }
-
-
