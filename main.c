@@ -4,11 +4,12 @@
 
 #include "mystring.h"
 
-int main() {
+int main(){
 
   char s1[100];
   char s2[100] = "hello";
   char s3[100] = "goodbye";
+  char s4[100] = "bye";
 
   printf("start strings:\n");
   printf("s1: [%s]\n", s1);
@@ -61,8 +62,9 @@ int main() {
   printf("\t\t[standard]:\t[%d]\n", strcmp("abc", "abc") );
   printf("\t\t[mine]:\t\t[%d]\n", mystrcmp("abc", "abc") );
   
-  printf("\t\t[standard]:\t[%d]\n", strcmp("abc", "abc") );
-  printf("\t\t[mine]:\t\t[%d]\n", mystrcmp("abc", "abc") );
+  printf("\nTesting strstr\n");
+  printf("\t\t[standard]:\t[%p]\n", strstr(s3, s4) );
+  printf("\t\t[mine]:\t\t[%p]\n", mystrstr(s3, s4) );
   
 
   return 0;

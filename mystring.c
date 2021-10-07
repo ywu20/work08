@@ -50,7 +50,7 @@ char * mystrncat( char *dest, char *source,int n){
 //strcmp [ int mystrcmp( char *s1, char *s2 ) ]
 //    Your version does not need to return the same exact value as the system version, as long as it returns -, + or 0 when it should.
 int mystrcmp( char *s1, char *s2 ){
-  while(*s1 == *s2 && *s1 && *s2){
+  while((*s1 == *s2) && *s1 && *s2){
     s1++;
     s2++;
   }
@@ -70,6 +70,21 @@ char * mystrchr( char *s, char c ){
 }
 
 //mystrstr
+
 char * mystrstr( char *s1, char * s2 ){
+   char *s1cp = s1;
+   char* s2cp = s2;
+   while(*s1){
+     s2 = s2cp;
+     while(*s1 == *s2){
+     	if (s2 == NULL) break;
+     	s1++;
+     	s2++;
+     }
+     s1++;
+   }
+   if(s2 == NULL) return s1cp;
+   else return NULL; 
 }
+
 
