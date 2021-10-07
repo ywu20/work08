@@ -9,7 +9,7 @@ int main(){
   char s1[100];
   char s2[100] = "hello";
   char s3[100] = "goodbye";
-  char s4[100] = "bye";
+  char s4[100] = "by";
 
   printf("start strings:\n");
   printf("s1: [%s]\n", s1);
