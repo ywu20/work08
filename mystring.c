@@ -77,14 +77,13 @@ char * mystrstr( char *s1, char * s2 ){
    while(*s1){
      s2 = s2cp;
      while(*s1 == *s2){
-     	if (s2 == NULL) break;
+     	if (s2 == NULL) return --s1;
      	s1++;
      	s2++;
      }
      s1++;
    }
-   if(s2 == NULL) return s1cp;
-   else return NULL; 
+   return NULL;
 }
 
 
